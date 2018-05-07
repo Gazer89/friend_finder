@@ -13,7 +13,7 @@
     },
     "name": "friendfinder",
     "version": "1.0.0",
-    "description": "Helps you find the characters you are looking for",
+    "description": "",
     "main": "server.js",
     "dependencies": {
       "body-parser": "^1.15.0",
