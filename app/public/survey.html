@@ -259,7 +259,7 @@
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Your Best Friend</h4>
             </div>
             <div class="modal-body">
                 <div id="myfriend"></div>
@@ -338,12 +338,15 @@
             }
             if (friends.length){
                 console.log(friendMatch)
+             
+                var message = $("<p>").text("We have found you a new bestfriend");
+                var messagerow = $("<tr>").append(message);
                 var bestFriendImg = $("<img>").attr({src:friendMatch.image});
-                $(bestFriendImg).append($("<div  style='fontsize: 50px'>").text("Your best friend is" + friendMatch.name1))
-                $(bestFriendImg).css({hieght: "150px",width: "150px"})
-                var bestFreindName = $("<tr>").html(friendMatch.name)
-                var bestFriendScore =  $("<tr>").html(friendMatch.diff);
-                $("#myfriend").append(bestFriendImg, bestFreindName, bestFriendScore);
+                $(bestFriendImg).css({hieght: "200px",width: "200px"})
+                var bestFreindName = $("<tr>").html("Bestfriend Name: " + friendMatch.name)
+                var bestFriendScore =  $("<tr>").html("Score:" + friendMatch.diff);
+                $(bestFriendImg).text("Check it out,your new bestfriend is " + bestFreindName)
+                $("#myfriend").append(messagerow, bestFriendImg, bestFreindName, bestFriendScore);
             }	
         });	
     }
