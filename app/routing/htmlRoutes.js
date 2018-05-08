@@ -2,9 +2,13 @@ var friends = require('../data/friends');
 
 module.exports = (app) => {
 
+	// app.get('/', (req, res) => {
+	// 	// res.sendFile(path.join(__dirname, 'home.html'));
+	// 	res.sendFile('home.html', { root: './app/public' });
+	// });
+
 	app.get('/', (req, res) => {
-		// res.sendFile(path.join(__dirname, 'home.html'));
-		res.sendFile('home.html', { root: './app/public' });
+		res.sendFile((path.join(__dirname, 'home.html'))
 	});
 
 	app.get('/survey', (req,res) => {
