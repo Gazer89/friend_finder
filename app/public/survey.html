@@ -339,6 +339,7 @@
             if (friends.length){
                 console.log(friendMatch)
                 var bestFriendImg = $("<img>").attr({src:friendMatch.image});
+                $(bestFriendImg).append($("<div  style='fontsize: 50px'>").text("Your best friend is" + friendMatch.name1))
                 $(bestFriendImg).css({hieght: "150px",width: "150px"})
                 var bestFreindName = $("<tr>").html(friendMatch.name)
                 var bestFriendScore =  $("<tr>").html(friendMatch.diff);
